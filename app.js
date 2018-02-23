@@ -24,6 +24,6 @@ app.use(allRoutes);
 
 //Starting Server Here
 
-app.listen(config.port, config.host, () => {
+app.listen(process.env.PORT || config.port, config.host, () => {
     console.log(`server is running at http://${config.host}:${config.port}`);
 });
